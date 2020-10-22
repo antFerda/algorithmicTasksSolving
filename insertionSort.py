@@ -5,6 +5,8 @@ def insert(array, rightIndex, value):
   rightLimit = rightIndex + 1
   sorted_arr = array[0:rightLimit]
   unsorted_arr = array[rightLimit:]
+  print('Sorted part ', sorted_arr)
+  print('Unsorted part ', unsorted_arr)
 
   for i, obj in enumerate(sorted_arr[:]):
     if value <= obj:
@@ -18,6 +20,23 @@ def insert(array, rightIndex, value):
   unsorted_arr.remove(value)
   sorted_arr.extend(unsorted_arr)
   print('Returning', sorted_arr)
+  
+  del array[:]
+  array.extend(sorted_arr)
+  return array
 
-  array = sorted_arr
+  
+def insertionSort(array):
+  print('New test: ', array)
+  print(len(array))
+
+  for i in range(len(array)):
+    if i + 1 == len(array):
+      return   
+    value = array[i + 1]
+    insert(array, i, value)
+
+    
+  
   return
+
