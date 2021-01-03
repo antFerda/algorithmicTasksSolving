@@ -35,8 +35,5 @@ def insertionSort(array):
       return   
     value = array[i + 1]
     insert(array, i, value)
-
-    
-  
   return
 
