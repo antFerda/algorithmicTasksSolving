@@ -8,7 +8,7 @@ def indexOfMinimum(array, startIndex):
   minValue = array[startIndex]
   minIndex = startIndex
 
-  for i in xrange(minIndex + 1,len(array)):
+  for i in range(minIndex + 1,len(array)):
     if array[i] < minValue:
       minIndex = i
       minValue = array[i]
@@ -20,3 +20,6 @@ def selectionSort(array):
   for i in range(len(array)):
     swap(array, i, indexOfMinimum(array, i))
   return array
+
+
+print(selectionSort([1, 5, 6, 4]))
